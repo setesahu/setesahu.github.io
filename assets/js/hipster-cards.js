@@ -1,11 +1,3 @@
-$(document).ready(function(){
-    window_width = $(window).width();
-        
-    // Make the images from the card fill the hole space
-    hipster_cards.fitBackgroundForCards();
-      
-});
-
 hipster_cards = {
     misc:{
         navbar_menu_visible: 0
@@ -46,4 +38,9 @@ hipster_cards = {
         });
         
     },   
+    init: function(){
+        window_width = $(window).width();
+        // Make the images from the card fill the hole space
+        hipster_cards.fitBackgroundForCards();
+    }
 }
