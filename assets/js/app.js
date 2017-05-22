@@ -85,7 +85,7 @@ $().ready(function(){
     window_width = $(window).width();
     var card_template = $.templates("#card-news-simple");
 
-    $.get('feed.json', function(data){
+    $.get(FEED_URL, function(data){
         if(data.data){
             $.each(data.data, function(index,item){
                 if(item.message){
