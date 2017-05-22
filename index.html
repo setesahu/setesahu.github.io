@@ -163,7 +163,11 @@
 </body>
 
 <script>
-    var FEED_URL = 'feed.json?v=' + new Date().getTime();
+    var dd = new Date().getTime();
+    var FEED_URL = ('feed.json?v=' + dd);
+		if(!window.location.search.startsWith("?v")){
+						window.location.href = window.location.href + "?v" + dd;
+		}
     </script>
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
